@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 50px;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(214, 211, 211);
+      }
+      header {
+        grid-row: 1;
+        display: grid;
+        background-color: darkgray;
+        border-radius: 5px;
+        grid-template-columns: 500px 800px;
+        grid-template-rows: 25px 25px 25px;
+        text-align: center;
+      }
+
+      header h1 {
+        grid-column-start: 1;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      nav {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .nav-list {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        border: 2px solid gray;
+        border-radius: 20px 5px;
+        width: 100%;
+        text-align: center;
+        background-color: lightgray;
+      }
+
+      .nav-list a {
+        color: black;
+        padding: 5px 10px;
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+      }
+
+      .nav-list a:hover {
+        border-radius: 20px 5px;
+        background-color: gray;
+      }
+
+      .nav-list li {
+        display: inline;
+      }
+      main {
+        grid-row-start: 2;
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 1fr 500px 1fr;
+        border: 2px solid gray;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px;
+      }
+      .slider {
+        display: grid;
+        grid-column: 2;
+      }
+      .slider-image img {
+        width: 500px;
+        height: 700px;
+        border-radius: 15px;
+      }
+      .slider-button {
+        display: grid;
+        grid-template-columns: 50px 400px 50px;
+        position: absolute;
+        padding-top: 325px;
+      }
+      .slider-button button {
+        opacity: 0.5;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: none;
+      }
+      .button-left {
+        grid-column-start: 1;
+      }
+      .button-right {
+        grid-column-start: 3;
+      }
+      .slider-text {
+        text-align: center;
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="grid2.html"><h1 style="color: black">Название сайта</h1></a>
+      <!-- навигационное меню -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="Registr.html">Registration</a></li>
+          <li><a href="Auth.html">Authorization</a></li>
+          <li><a href="">LK</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="slider-button">
+        <button class="button-left">&lt;</button>
+        <button class="button-right">&gt;</button>
+      </div>
+      <div class="slider">
+        <div class="slider-image">
+          <img src="pig.jpg" alt="картинка" />
+        </div>
+
+        <div class="slider-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maxime accusamus aliquid ducimus ullam
+            magnam, ut voluptas sint illo omnis sequi totam exercitationem sed quo autem magni. Possimus, quisquam
+            fugit.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p id="contacts">Contacts</p>
+    </footer>
+  </body>
+</html>
